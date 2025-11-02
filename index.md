@@ -1,16 +1,17 @@
 ---
-title: Cloud-Native Laughter Detection and Emotion Analytics Platform
-description: Dual-tone academic + technical documentation for the MSc project.
+title: Overview
+layout: default
+nav_order: 1
+description: Cloud-Native Laughter Detection and Emotion Analytics Platform - MSc Project Documentation
 ---
 
 > **Author:** Ugwute Charles Ogbonna  
 > **Programme:** MSc Software Engineering, University of Bolton  
 > **Supervisor:** Aamir Abbas
 
+# Cloud-Native Laughter Detection and Emotion Analytics Platform
 
-# Overview
-
-**Project Title:** *Cloud-Native Laughter Detection and Emotion Analytics Platform*
+**Project Overview:** *A sophisticated web application that combines Django web framework with advanced Machine Learning capabilities to analyze laughter patterns in uploaded videos.*
 
 This documentation presents a dual-tone view:
 - 🎓 **Academic narrative:** aligns with MSc dissertation conventions (COM7302/COM7303).

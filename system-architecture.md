@@ -1,12 +1,13 @@
 ---
-title: Cloud-Native Laughter Detection and Emotion Analytics Platform
-description: Dual-tone academic + technical documentation for the MSc project.
+title: System Architecture
+layout: default
+nav_order: 2
+description: Technical architecture and ML pipeline documentation
 ---
 
 > **Author:** Ugwute Charles Ogbonna  
 > **Programme:** MSc Software Engineering, University of Bolton  
 > **Supervisor:** Aamir Abbas
-
 
 # System Architecture
 

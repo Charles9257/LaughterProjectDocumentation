@@ -1,14 +1,15 @@
 ---
-title: Cloud-Native Laughter Detection and Emotion Analytics Platform
-description: Dual-tone academic + technical documentation for the MSc project.
+title: Implementation Guide
+layout: default
+nav_order: 3
+description: Complete developer setup and implementation guide
 ---
 
 > **Author:** Ugwute Charles Ogbonna  
 > **Programme:** MSc Software Engineering, University of Bolton  
 > **Supervisor:** Aamir Abbas
 
-
-# Implementation (Developer Guide)
+# Implementation Guide
 
 ## System Requirements
 

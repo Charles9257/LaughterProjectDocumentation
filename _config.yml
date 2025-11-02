@@ -1,7 +1,7 @@
 
 # Jekyll configuration for GitHub Pages
-title: "Cloud-Native Laughter Detection and Emotion Analytics Platform"
-description: "Dual-tone academic + technical docs with Mermaid diagrams"
+title: "Laughter Detection Platform Documentation"
+description: "MSc Project - Cloud-Native Laughter Detection and Emotion Analytics Platform"
 baseurl: "/LaughterProjectDocumentation"
 url: "https://charles9257.github.io"
 
@@ -18,33 +18,16 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-# Navigation
+
+# Navigation (only main pages)
 header_pages:
   - index.md
-  - background.md
-  - methodology.md
   - system-architecture.md
   - implementation.md
-  - evaluation.md
   - results.md
-  - conclusion.md
-  - references.md
-
-# Custom navigation labels
-nav_order:
-  index: 1
-  background: 2
-  methodology: 3
-  system-architecture: 4
-  implementation: 5
-  evaluation: 6
-  results: 7
-  conclusion: 8
-  references: 9
 
 # Site settings
 show_excerpts: true
-paginate: 5
 
 # Footer
 footer_text: "© 2025 Ugwute Charles Ogbonna — MSc Software Engineering, University of Bolton. Academic & research use only."
