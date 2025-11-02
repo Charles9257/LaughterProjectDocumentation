@@ -6,7 +6,7 @@ description: Cloud-Native Laughter Detection and Emotion Analytics Platform - MS
 ---
 
 > **Author:** Ugwute Charles Ogbonna  
-> **Programme:** MSc Software Engineering, University of Bolton  
+> **Programme:** MSc Software Engineering, University of Greater Manchester  
 > **Supervisor:** Aamir Abbas
 
 # Cloud-Native Laughter Detection and Emotion Analytics Platform

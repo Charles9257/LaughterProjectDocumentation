@@ -23,6 +23,7 @@ kramdown:
 header_pages:
   - index.md
   - system-architecture.md
+  - methodology.md
   - implementation.md
   - results.md
 
