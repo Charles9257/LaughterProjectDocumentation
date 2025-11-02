@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9f1ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grad)"/>
+  <g>
+    <rect x="80" y="120" width="1440" height="660" rx="28" fill="#ffffff" stroke="#1f6feb" stroke-width="3"/>
+    <text x="100" y="240" font-family="Inter, Segoe UI, Arial" font-size="54" fill="#0b1221" font-weight="700">
+      Cloud-Native Laughter Detection and Emotion Analytics Platform
+    </text>
+    <text x="100" y="310" font-family="Inter, Segoe UI, Arial" font-size="28" fill="#1f6feb">
+      AI-Powered Video Processing • Microservices • Pragmatic Mixed-Methods
+    </text>
+    <text x="100" y="390" font-family="Inter, Segoe UI, Arial" font-size="24" fill="#334155">
+      Author: Ugwute Charles Ogbonna • Programme: MSc Software Engineering, University of Bolton
+    </text>
+    <text x="100" y="430" font-family="Inter, Segoe UI, Arial" font-size="24" fill="#334155">
+      Supervisor: Aamir Abbas • © 2025 — Academic & Research Use Only
+    </text>
+    <g transform="translate(100,520)">
+      <rect x="0" y="0" width="380" height="140" rx="18" fill="#f8fbff" stroke="#1f6feb" stroke-width="2"/>
+      <text x="20" y="56" font-family="Inter, Segoe UI, Arial" font-size="24" fill="#1f6feb">Architecture</text>
+      <text x="20" y="92" font-family="Inter, Segoe UI, Arial" font-size="18" fill="#334155">Frontend • API • Detector • Dashboard</text>
+    </g>
+    <g transform="translate(520,520)">
+      <rect x="0" y="0" width="380" height="140" rx="18" fill="#f8fbff" stroke="#1f6feb" stroke-width="2"/>
+      <text x="20" y="56" font-family="Inter, Segoe UI, Arial" font-size="24" fill="#1f6feb">DevOps</text>
+      <text x="20" y="92" font-family="Inter, Segoe UI, Arial" font-size="18" fill="#334155">GitHub Actions • Docker • AWS EC2</text>
+    </g>
+    <g transform="translate(940,520)">
+      <rect x="0" y="0" width="380" height="140" rx="18" fill="#f8fbff" stroke="#1f6feb" stroke-width="2"/>
+      <text x="20" y="56" font-family="Inter, Segoe UI, Arial" font-size="24" fill="#1f6feb">Research</text>
+      <text x="20" y="92" font-family="Inter, Segoe UI, Arial" font-size="18" fill="#334155">Pragmatism • XAI • Fairness</text>
+    </g>
+  </g>
+</svg>

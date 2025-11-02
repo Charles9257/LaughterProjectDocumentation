@@ -1,0 +1,29 @@
+
+site_title: "Cloud-Native Laughter Detection and Emotion Analytics Platform"
+site_description: "Dual-tone academic + technical docs with Mermaid diagrams"
+theme:
+  name: "light"
+  accent_color: "#1f6feb"  # blue accent
+  code_block:
+    theme: "light"
+navigation:
+  - text: "Overview"
+    link: "/docs/index"
+  - text: "Background"
+    link: "/docs/background"
+  - text: "Methodology"
+    link: "/docs/methodology"
+  - text: "System Architecture"
+    link: "/docs/system-architecture"
+  - text: "Implementation"
+    link: "/docs/implementation"
+  - text: "Evaluation"
+    link: "/docs/evaluation"
+  - text: "Results"
+    link: "/docs/results"
+  - text: "Conclusion"
+    link: "/docs/conclusion"
+  - text: "References"
+    link: "/docs/references"
+footer_text: "© 2025 Ugwute Charles Ogbonna — MSc Software Engineering, University of Bolton. Academic & research use only."
+mermaid: true
