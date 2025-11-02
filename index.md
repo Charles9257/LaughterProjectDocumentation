@@ -69,38 +69,10 @@ The Laughter Analysis System is a sophisticated web application that combines Dj
 - **CI/CD Pipeline**: Automated testing, building, and deployment
 - **Monitoring & Alerting**: Comprehensive health checks and notifications
 
-## High-Level Architecture (Mermaid)
-```mermaid
-flowchart TD
-    U[User Camera<br/>(Web)] --> F[Frontend]
-    F --> API[Django REST API]
-    API --> P[Preprocessing Service]
-    P -->|Frames/Audio| LD[Laughter Detection Service]
-    LD --> EM[Emotion Classifier]
-    EM --> MSG[Event Bus / Queue]
-    MSG --> DB[(PostgreSQL)]
-    MSG --> DASH[Dashboard (Streamlit/Dash)]
-    
-    subgraph Cloud [AWS EC2 / Container Host]
-      API
-      P
-      LD
-      EM
-      DASH
-      DB
-    end
-    
-    subgraph ML_Pipeline [ML Processing Pipeline]
-      VID[Video Input] --> FF[FFmpeg Converter]
-      FF --> CV[OpenCV Frame Extractor]
-      CV --> FER[FER Emotion Detector]
-      FER --> CLS[Laughter Classifier]
-      CLS --> RES[Analysis Results]
-    end
-    
-    P --> ML_Pipeline
-    ML_Pipeline --> EM
-```
+## High-Level System Architecture
+
+![System Overview](assets/system.png)
+*Figure 1: High-level system architecture overview showing all major components and their interactions*
 
 ## Performance Achievements
 

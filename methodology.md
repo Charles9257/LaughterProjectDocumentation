@@ -19,202 +19,31 @@ description: Research methodology, system design, and project management approac
 - **Thematic Literature Methodology:** Systematic literature review for technical foundation
 
 ### Design Philosophy
-```mermaid
-flowchart LR
-  A[Quantitative<br/>Model Metrics] <-- Triangulate --> B[Qualitative<br/>Usability & Ethics]
-  A --> C[Integration & Interpretation]
-  B --> C
-  C --> D[Actionable Insights<br/>for Iteration]
-```
+
+![Mixed Methods Design](assets/cover.png)
+*Figure 1: Mixed-Methods Concurrent Triangulation Design Approach*
 
 ## System Design
 
 ### Use Case Diagram
 
-```mermaid
-flowchart TD
-  subgraph "Laughter Detection Platform"
-    subgraph "Users"
-      U1[Student]
-      U2[Teacher]
-      U3[Parent]
-      U4[Admin]
-    end
-    
-    subgraph "Core Use Cases"
-      UC1[Upload Video]
-      UC2[View Analysis Results]
-      UC3[Download Reports]
-      UC4[Manage User Profiles]
-      UC5[Configure Settings]
-      UC6[Monitor System Performance]
-      UC7[Manage User Accounts]
-      UC8[View Analytics Dashboard]
-    end
-    
-    subgraph "System Functions"
-      SF1[Process Video]
-      SF2[Detect Faces]
-      SF3[Analyze Emotions]
-      SF4[Classify Laughter]
-      SF5[Generate Reports]
-      SF6[Store Data]
-    end
-  end
-  
-  U1 --> UC1
-  U1 --> UC2
-  U1 --> UC3
-  U2 --> UC1
-  U2 --> UC2
-  U2 --> UC8
-  U3 --> UC2
-  U3 --> UC3
-  U4 --> UC6
-  U4 --> UC7
-  U4 --> UC8
-  
-  UC1 --> SF1
-  SF1 --> SF2
-  SF2 --> SF3
-  SF3 --> SF4
-  SF4 --> SF5
-  SF5 --> SF6
-```
+![Use Case Diagram](assets/usecasediagram.png)
+*Figure 2: System Use Case Diagram showing user interactions and core functionalities*
 
 ### Activity Diagram: Video Processing Workflow
 
-```mermaid
-flowchart TD
-  Start([User Uploads Video]) --> Check{Video Format Valid?}
-  Check -->|No| Error[Display Format Error]
-  Check -->|Yes| Convert[Convert to Standard Format]
-  Convert --> Extract[Extract Frames at 30 FPS]
-  Extract --> Detect[Face Detection using MTCNN]
-  Detect --> Found{Faces Found?}
-  Found -->|No| NoFace[Log: No Faces Detected]
-  Found -->|Yes| Emotion[Emotion Analysis using FER]
-  Emotion --> Classify[Laughter Classification]
-  Classify --> Aggregate[Aggregate Results]
-  Aggregate --> Store[Store in Database]
-  Store --> Generate[Generate Analysis Report]
-  Generate --> Notify[Notify User: Processing Complete]
-  Notify --> End([End])
-  NoFace --> End
-  Error --> End
-```
+![Activity Diagram](assets/activitydiagram.png)
+*Figure 3: Activity Diagram showing the complete video processing workflow from upload to completion*
 
 ### Class Diagram: Core System Components
 
-```mermaid
-classDiagram
-  class User {
-    +int id
-    +string username
-    +string email
-    +string role
-    +datetime created_at
-    +authenticate()
-    +get_profile()
-    +update_profile()
-  }
-  
-  class Video {
-    +int id
-    +string filename
-    +string format
-    +float duration
-    +int user_id
-    +datetime uploaded_at
-    +validate_format()
-    +get_metadata()
-  }
-  
-  class Analysis {
-    +int id
-    +int video_id
-    +json emotion_data
-    +json laughter_segments
-    +float confidence_score
-    +datetime processed_at
-    +generate_report()
-    +export_results()
-  }
-  
-  class EmotionDetector {
-    +string model_path
-    +float threshold
-    +detect_emotions()
-    +preprocess_frame()
-    +postprocess_results()
-  }
-  
-  class LaughterClassifier {
-    +string model_type
-    +dict parameters
-    +classify_segment()
-    +calculate_confidence()
-    +validate_prediction()
-  }
-  
-  class Report {
-    +int id
-    +int analysis_id
-    +string report_type
-    +json data
-    +datetime generated_at
-    +generate_pdf()
-    +export_csv()
-  }
-  
-  User ||--o{ Video : uploads
-  Video ||--|| Analysis : processes
-  Analysis ||--|| Report : generates
-  EmotionDetector --> Analysis : performs
-  LaughterClassifier --> Analysis : performs
-```
+![Class Diagram](assets/class.png)
+*Figure 4: Class Diagram showing the core system components, relationships, and methods*
 
 ### Sequence Diagram: User Authentication & Video Processing
 
-```mermaid
-sequenceDiagram
-  participant U as User
-  participant W as Web Interface
-  participant A as Auth Service
-  participant V as Video Processor
-  participant ML as ML Pipeline
-  participant DB as Database
-  participant N as Notification Service
-  
-  U->>W: Login Request
-  W->>A: Validate Credentials
-  A->>DB: Check User Data
-  DB-->>A: User Details
-  A-->>W: JWT Token
-  W-->>U: Authentication Success
-  
-  U->>W: Upload Video
-  W->>A: Validate Token
-  A-->>W: Token Valid
-  W->>V: Process Video Request
-  V->>DB: Store Video Metadata
-  V->>ML: Initialize Processing
-  
-  ML->>ML: Extract Frames
-  ML->>ML: Detect Faces
-  ML->>ML: Analyze Emotions
-  ML->>ML: Classify Laughter
-  ML->>DB: Store Results
-  
-  DB-->>V: Processing Complete
-  V->>N: Send Notification
-  N-->>U: Email: Results Ready
-  
-  U->>W: View Results
-  W->>DB: Fetch Analysis
-  DB-->>W: Analysis Data
-  W-->>U: Display Results
-```
+![Sequence Diagram](assets/sequencediagram.png)
+*Figure 5: Sequence Diagram illustrating user authentication flow and video processing interaction between system components*
 
 ## Project Timeline: Gantt Chart (September - December 2024)
 
@@ -278,24 +107,8 @@ gantt
 
 ### Software Development Life Cycle (SDLC)
 
-```mermaid
-flowchart TD
-  A[Requirements Analysis] --> B[System Design]
-  B --> C[Implementation]
-  C --> D[Testing]
-  D --> E[Deployment]
-  E --> F[Maintenance]
-  F --> A
-  
-  subgraph "Continuous Integration"
-    G[Code Commit]
-    H[Automated Testing]
-    I[Build & Deploy]
-    G --> H --> I
-  end
-  
-  C --> G
-```
+![State Diagram](assets/state.png)
+*Figure 6: Software Development Life Cycle with Continuous Integration approach*
 
 ## Research Methods
 

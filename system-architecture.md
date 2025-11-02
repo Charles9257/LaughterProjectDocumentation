@@ -21,31 +21,13 @@ The system uses a multi-layered AI approach combining:
 4. **Deep Learning**: TensorFlow backend for neural networks
 5. **Classification**: Custom algorithms for laughter type detection
 
-## Microservices View
-```mermaid
-flowchart TD
-  FE[Frontend (HTML/JS/Bootstrap)] --> GW[/Nginx Gateway/]
-  GW --> API[Django REST API]
-  API --> PRE[Preprocessing Service]
-  PRE --> DET[Laughter Detector (DL)]
-  DET --> EMO[Emotion Classifier]
-  API --> MQ[(Message Queue)]
-  EMO --> MQ
-  MQ --> DB[(PostgreSQL)]
-  MQ --> DASH[Analytics Dashboard]
-  
-  subgraph ML_Pipeline [ML Processing Pipeline]
-    VID[Video Input] --> FF[FFmpeg Converter]
-    FF --> CV[OpenCV Frame Extractor]
-    CV --> FER[FER Emotion Detector]
-    FER --> CLS[Laughter Classifier]
-    CLS --> RES[Analysis Results]
-  end
-  
-  PRE --> ML_Pipeline
-  ML_Pipeline --> EMO
-```
-**Rationale:** separation of concerns, independent scaling, fault isolation.
+## System Architecture Overview
+
+![System Architecture](assets/system_architecture.png)
+*Figure 1: Complete system architecture showing all components and their interactions*
+
+![Overall Architecture](assets/over_all_architecture.png)
+*Figure 2: High-level overview of the system architecture and data flow*
 
 ## Core ML Components
 
@@ -202,29 +184,14 @@ def classify_laughter_patterns(avg_emotions, timeline):
 ```
 
 ## Data Flow
-```mermaid
-sequenceDiagram
-  participant User
-  participant Frontend
-  participant API
-  participant VideoProcessor
-  participant FER_Detector
-  participant Classifier
-  participant DB
-  participant Dashboard
 
-  User->>Frontend: Upload video file
-  Frontend->>API: POST /api/analysis/video/
-  API->>VideoProcessor: Convert to MP4
-  VideoProcessor->>FER_Detector: Extract frames
-  FER_Detector->>Classifier: Emotion analysis
-  Classifier-->>API: Laughter classification JSON
-  API->>DB: Store analysis results
-  API-->>Frontend: Analysis complete
-  DB-->>Dashboard: Aggregated metrics
-```
+![Data Flow Diagram](assets/dataflow.png)
+*Figure 3: Data flow sequence showing user interaction, processing pipeline, and database operations*
 
 ## Database Schema
+
+![Entity Relationship Diagram](assets/ERDdiagram.png)
+*Figure 4: Entity Relationship Diagram showing database schema and relationships*
 
 ### Core Models
 
@@ -290,6 +257,11 @@ class OptimizedVideoAnalyzer:
         )
         return result
 ```
+
+## Deployment Architecture
+
+![Deployment Diagram](assets/deployment.png)
+*Figure 5: Deployment architecture showing infrastructure components and cloud deployment strategy*
 
 ## Security & Privacy (high level)
 - JWT auth, HTTPS, role-based access (admin/teacher/parent/student as needed)
